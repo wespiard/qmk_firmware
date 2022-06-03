@@ -76,7 +76,7 @@ uint8_t init_mcp23017(void) {
     // - driving : output : 0
     // This means: we will read all the bits on GPIOA
     // This means: we will write to the pins 0-4 on GPIOB (in select_rows)
-    uint8_t buf[] = {IODIRA, 0b11111111, 0b11110000};
+    uint8_t buf[] = {IODIRA, 0b11111111, 0b11100000};
     print("before transmit\n");
     mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf, sizeof(buf), MCP23017_I2C_TIMEOUT);
     uprintf("after transmit %i\n", mcp23017_status);
@@ -87,7 +87,7 @@ uint8_t init_mcp23017(void) {
         // - driving : off : 0
         // This means: we will read all the bits on GPIOA
         // This means: we will write to the pins 0-4 on GPIOB (in select_rows)
-        uint8_t pullup_buf[] = {GPPUA, 0b11111111, 0b11110000};
+        uint8_t pullup_buf[] = {GPPUA, 0b11111111, 0b11100000};
         mcp23017_status      = i2c_transmit(I2C_ADDR_WRITE, pullup_buf, sizeof(pullup_buf), MCP23017_I2C_TIMEOUT);
         uprintf("after transmit2 %i\n", mcp23017_status);
     }
@@ -194,6 +194,7 @@ static matrix_row_t read_cols(uint8_t row) {
             // The initial state was all ones and any depressed key at a given column for the currently selected row will have its bit flipped to zero.
             // The return value is a row as represented in the generic matrix code were the rightmost bits represent the lower columns and zeroes represent non-depressed keys while ones represent depressed keys.
             // Since the pins connected to eact columns are sequential, and counting from zero up (col 5 -> GPIOA0, col 6 -> GPIOA1 and so on), the only transformation needed is a bitwise not to swap all zeroes and ones.
+            // TODO: consider doing inversion in hardware using register.
             uint8_t data[] = {0};
             if (!mcp23017_status) {
                 mcp23017_status = i2c_receive(I2C_ADDR_READ, data, sizeof(data), MCP23017_I2C_TIMEOUT);
