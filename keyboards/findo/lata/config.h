@@ -40,7 +40,7 @@
 #define UNUSED_PINS_MCP     { B5, B6, B7, A6, A7 }
 
 /* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
+//#define DIODE_DIRECTION COL2ROW
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
