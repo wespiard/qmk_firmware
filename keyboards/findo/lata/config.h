@@ -45,8 +45,11 @@
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
 
+//#define MATRIX_ROW_PINS { A6, A5, A4, A3, A10, A0, A0, A0, A0, A0 }
+//#define MATRIX_COL_PINS { B11, B10, B2, B1, B0, A1, A1, A1, A1, A1, A1, A1 }
+
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+//#define DEBOUNCE 5
 
 /* i2c settings */
 

@@ -1,26 +1,14 @@
 {
-    "manufacturer": "Wes Piard",
-    "keyboard_name": "findo/lata",
-    "maintainer": "wespiard",
-    "bootloader": "stm32-dfu",
-    "diode_direction": "COL2ROW",
-    "features": {
-        "bootmagic": true,
-        "command": false,
-        "console": false,
-        "extrakey": true,
-        "mousekey": true,
-        "nkro": true
-    },
-    "matrix_pins": {
-        "cols": [ "B11", "B10", "B2", "B1", "B0", "A7", "A7", "A7", "A7", "A7", "A7", "A7" ],
-        "rows": ["A6", "A5", "A4", "A3", "A10" ]
-    },
-    "processor": "STM32F072",
-    "url": "",
-    "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0x3744"
-    }
+  "keyboard_name": "Findo Lata",
+  "debounce": 5,
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+    "cols": [ "B11", "B10", "B2", "B1", "B0", "A1", "A1", "A1", "A1", "A1", "A1", "A1" ],
+    "rows": [ "A6", "A5", "A4", "A3", "A10", "A0", "A0", "A0", "A0", "A0" ]
+  },
+  "usb": {
+    "vid": "0x3744",
+    "pid": "0x0100",
+    "device_version": "0.0.1"
+  }
 }
