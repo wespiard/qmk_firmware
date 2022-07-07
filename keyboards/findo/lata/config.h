@@ -19,6 +19,11 @@
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+/* USB Device descriptor parameter */
+// #define VENDOR_ID    0x4653
+// #define PRODUCT_ID   0x0001
+// #define DEVICE_VER   0x0001
+
 /* key matrix size */
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 12
@@ -26,36 +31,24 @@
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
 #define MATRIX_COLS_PER_SIDE (MATRIX_COLS / 2)
 
-#define UNUSED_MCU 18
-#define UNUSED_MCP 5
+#define UNUSED_MCU 22
+#define UNUSED_EXPANDER 5
 
 // wiring
-#define MATRIX_ROW_PINS_MCU { A6, A5, A4, A3, A10 }
-#define MATRIX_COL_PINS_MCU { B11, B10, B2, B1, B0, A7 }
+#define MATRIX_ROW_PINS_MCU { B1, A7, A5, A3, A1 }
+#define MATRIX_COL_PINS_MCU { A0, A2, A4, A6, B0, B2 }
 #define UNUSED_PINS_MCU \
-    { A0, A1, A2, A15, B3, B4, B5, B8, B9, B12, B13, B14, B15, C13, C14, C15, F0, F1 }
+    { A8, A9, A10, A13, A14, A15, B3, B4, B5, B6, B7, B8, B9, B12, B13, B14, B15, C13, C14, C15, F0, F1 }
 
-#define MATRIX_ROW_PINS_MCP { B0, B1, B2, B3, B4 }
-#define MATRIX_COL_PINS_MCP { A0, A1, A2, A3, A4, A5 }
-#define UNUSED_PINS_MCP     { B5, B6, B7, A6, A7 }
-
-/* COL2ROW, ROW2COL*/
-//#define DIODE_DIRECTION COL2ROW
-
-/* define if matrix has ghost (lacks anti-ghosting diodes) */
-//#define MATRIX_HAS_GHOST
-
-//#define MATRIX_ROW_PINS { A6, A5, A4, A3, A10, A0, A0, A0, A0, A0 }
-//#define MATRIX_COL_PINS { B11, B10, B2, B1, B0, A1, A1, A1, A1, A1, A1, A1 }
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-//#define DEBOUNCE 5
+#define MATRIX_ROW_PINS_EXPANDER { P1_0, P1_1, P1_2, P1_3, P1_4 }
+#define MATRIX_COL_PINS_EXPANDER { P0_0, P0_1, P0_2, P0_3, P0_4, P0_5}
+#define UNUSED_PINS_EXPANDER     { P1_5, P1_6, P1_7, P0_6, P0_7 }
 
 /* i2c settings */
 
-#define I2C_DRIVER I2CD1
-#define I2C1_SCL_PIN B6
-#define I2C1_SDA_PIN B7
+#define I2C_DRIVER I2CD2
+#define I2C1_SCL_PIN B10
+#define I2C1_SDA_PIN B11
 #define I2C1_TIMINGR_PRESC 2U
 #define I2C1_TIMINGR_SCLDEL 1U
 #define I2C1_TIMINGR_SDADEL 0U
