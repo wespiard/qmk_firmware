@@ -24,6 +24,8 @@
 // #define PRODUCT_ID   0x0001
 // #define DEVICE_VER   0x0001
 
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 // default but used in macros
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
@@ -35,9 +37,9 @@
 #define TAPPING_FORCE_HOLD
 
 // Auto Shift
-#define NO_AUTO_SHIFT_ALPHA
-#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-#define AUTO_SHIFT_NO_SETUP
+// #define NO_AUTO_SHIFT_ALPHA
+// #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+// #define AUTO_SHIFT_NO_SETUP
 
 /* key matrix size */
 #define MATRIX_ROWS 10
@@ -71,4 +73,3 @@
 #define I2C1_TIMINGR_SCLL 26U
 #define I2C1_SCL_PAL_MODE 1
 #define I2C1_SDA_PAL_MODE 1
-

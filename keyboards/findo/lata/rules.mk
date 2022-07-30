@@ -1,14 +1,8 @@
-# MCU name
 MCU = STM32F072
-
-# Bootloader selection
 BOOTLOADER = stm32-dfu
 
-# Build Options
-#   change yes to no to disable
-#
 BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
-MOUSEKEY_ENABLE = yes       # Mouse keys
+MOUSEKEY_ENABLE = no       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
@@ -20,6 +14,7 @@ UNICODE_ENABLE = yes
 CUSTOM_MATRIX = lite
 NO_USB_STARTUP_CHECK = yes
 LTO_ENABLE = no
+AUTO_SHIFT_ENABLE = no # Auto Shift
 
 SRC += matrix.c
 QUANTUM_LIB_SRC += i2c_master.c
