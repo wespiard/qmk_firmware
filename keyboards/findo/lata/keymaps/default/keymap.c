@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [U_COLEMAKDH] = LAYOUT_miryoku(
     KC_Q,         KC_W,         KC_F,               KC_P,               KC_B,                             KC_J,               KC_L,               KC_U,             KC_Y,               KC_QUOT,
-    LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S),       KC_T,               KC_G,                             KC_M,               KC_N,               LCTL_T(KC_E),     LALT_T(KC_I),       LGUI_T(KC_O),
+    LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S),       LSFT_T(KC_T),       KC_G,                             KC_M,               RSFT_T(KC_N),               RCTL_T(KC_E),     RALT_T(KC_I),       RGUI_T(KC_O),
     KC_Z,         KC_X,         KC_C,               KC_D,               KC_V,                             KC_K,               KC_H,               KC_COMM,          KC_DOT,             KC_SLSH,
     U_NP,         U_NP,         LT(U_MEDIA,KC_ESC), LT(U_NAV,KC_BSPC),  KC_LSFT,                          LT(U_SYM,KC_ENT),   LT(U_NUM,KC_SPC),   LT(U_FUN,KC_DEL), U_NP,               U_NP
   ),
@@ -62,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [U_NUM] = LAYOUT_miryoku(         
     KC_PLUS,           KC_7,              KC_8,               KC_9,              KC_EQL,                  U_NA,               DF(U_COLEMAKDH),    DF(U_GAME),         U_NA,             RESET,  
-    KC_MINS,           KC_4,              KC_5,               KC_6,              U_NU,                   U_NA,               KC_LSFT,            KC_LCTL,            KC_LALT,          KC_LGUI,
-    KC_DOT,            KC_1,              KC_2,               KC_3,              U_NU,                  U_NA,               U_NA,               U_NA,               U_NA,             U_NA,   
-    U_NP,              U_NP,              KC_0,               KC_SPC,            U_NU,                     U_NA,               U_NA,               U_NA,               U_NP,             U_NP
+    KC_MINS,           KC_4,              KC_5,               KC_6,              U_NU,                    U_NA,               KC_LSFT,            KC_LCTL,            KC_LALT,          KC_LGUI,
+    KC_DOT,            KC_1,              KC_2,               KC_3,              U_NU,                    U_NA,               U_NA,               U_NA,               U_NA,             U_NA,   
+    U_NP,              U_NP,              KC_0,               KC_SPC,            U_NU,                    U_NA,               U_NA,               U_NA,               U_NP,             U_NP
   ),
 
   [U_SYM] = LAYOUT_miryoku(         
