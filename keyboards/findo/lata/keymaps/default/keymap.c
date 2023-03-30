@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_PLUS,           KC_7,              KC_8,               KC_9,              KC_EQL,                  U_NA,               DF(U_COLEMAKDH),    DF(U_GAME),         U_NA,             RESET,  
     KC_MINS,           KC_4,              KC_5,               KC_6,              U_NU,                    U_NA,               KC_LSFT,            KC_LCTL,            KC_LALT,          KC_LGUI,
     KC_DOT,            KC_1,              KC_2,               KC_3,              U_NU,                    U_NA,               U_NA,               U_NA,               U_NA,             U_NA,   
-    U_NP,              U_NP,              KC_0,               KC_SPC,            U_NU,                    U_NA,               U_NA,               U_NA,               U_NP,             U_NP
+    U_NP,              U_NP,              KC_0,               KC_SPC,            KC_SLSH,                 U_NA,               U_NA,               U_NA,               U_NP,             U_NP
   ),
 
   [U_SYM] = LAYOUT_miryoku(         
